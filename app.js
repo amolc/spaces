@@ -61,11 +61,11 @@ survey.use(serveStatic('survey'));
 app.use('/survey', survey);
 
 
-app.listen(5000, function () {
-  console.log('CORS-enabled web server listening on port 5000')
+app.listen(6000, function () {
+  console.log('CORS-enabled web server listening on port 6000')
 })
 
 
 
 
-console.log("Magic at 5000");
+console.log("http://localhost6000");
