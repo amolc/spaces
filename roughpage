@@ -1,0 +1,32 @@
+<div id="carousel" >
+    <div>
+        <a target="_blank" href="awards-year=2015.php.html">
+            <img class="carouselimg" src="images/1_Winners-2016.jpg" alt=""/>
+        </a>
+    </div>
+    <div>
+        <a  href="advisory_panel-year=2016.php.html">
+            <img class="carouselimg" src="images/2_Advisory%20Council%202016.jpg" alt=""/>
+        </a>
+    </div>
+    <div>
+        <a  href="awards-year=2015.php.html">
+            <img class="carouselimg" src="images/3_Winners-2015.png" alt=""/>
+        </a>
+    </div>
+    <div>
+        <a target="_blank" href="advisory_panel-year=2015.php.html">
+            <img class="carouselimg" src="images/4_Advisory%20Council%202015.jpg" alt=""/>
+        </a>
+    </div>
+    <div>
+        <a target="_blank" href="http://cioacademyasia.org/">
+            <img class="carouselimg" src="images/carasaulone.jpg" alt=""/>
+        </a>
+    </div>
+    <div>
+        <a target="_blank" href="http://www.ideationedgeasia.org/">
+            <img class="carouselimg" src="images/carasaultwo.jpg" alt=""/>
+        </a>
+    </div>
+</div>
