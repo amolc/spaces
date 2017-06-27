@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SPACE Addition</title>
+<link rel="shortcut icon" href="fav.png" type="images/dell.jpg">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-storage.min.js"></script>
+
+	    <script type="text/javascript" src="js/adminspacecontroller.js"></script>
+</head>
+
+<body>
+		<div data-ng-app="SPACE" data-ng-controller="adminspacecontroller">
+	<<div id="black_wrapper">
+		</div>
+		<div id="advisory_wrapper">
+			<div class="get_in_touch mrgn_top">
+				
+				<div class="contact_details_2 fl">
+				
+				
+		
+				<br/>
+							<a href="index.html"  class="active dynamic_base_color">HOME</a>
+											
+				
+				</div>
+				<div class="advisory_panel fl" style="height:auto; width:640px;">
+				<div class="contact_form fr dynamic_base_color" name="registration" id="registration"  > 
+						<form class="form-horizontal" ng-controller="adminspacecontroller" ng-submit=insertspace()>
+							
+								<label>SpaceName</label>
+                        <input style="font-size: 15px;" name="fname" type="text" required ng-model="SpaceName"><br>
+                        <label>SpaceDescription</label>
+                        <input style="font-size: 15px;" name="lname" type="text" required ng-model="SpaceDescription"><br>
+       
+    
+                        <label>SpaceSize</label>
+                       
+                        <input style="font-size: 15px;" name="company" type="text" required ng-model="SpaceSize"><br>
+                        <label>Pax</label>
+                        <input style="font-size: 15px;" name="mobile" type="text" id="mobile" required ng-model="Pax"><br>
+                        <label>SpacePricing</label>
+                        <input style="font-size: 15px;" name="email" type="text" required ng-model="SpacePricing"><br>
+                        
+                       <label>SpaceAmenities</label>
+                        <input style="font-size: 15px;" name="email" type="text" required ng-model="SpaceAmenities"><br>
+						 <label>SpaceImage></label>
+                        <input type="file" name="pic"  required ng-model="SpaceImage" accept="image/*">
+                        
+                  
+							<input value="ADDSPACE" style="margin-left: 10px;" name="submit" type="submit">
+					
+					</div>
+													
+				
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	
+	
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+    <!-- Google CDN jQuery with fallback to local -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript">
+		(function($){
+			$(window).load(function(){
+				$("#content_6").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					},
+					theme:"dark-thick"
+				});
+				$("#content_7").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					},
+					theme:"dark-thick"
+				});
+			});
+		})(jQuery);
+	</script>
+
+<script>
+$("#accordion > li").click(function(){
+  $("#accordion li").removeClass("active");
+        $(this).addClass("active");
+	if(false == $(this).next().is(':visible')) {
+		$('#accordion > ul').slideUp(300);
+	}
+	$(this).next().slideToggle(300);
+});
+
+$('#accordion > ul:eq(0)').show();
+
+</script>
+</form>
+</body>
+</html>
