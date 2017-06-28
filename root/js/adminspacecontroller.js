@@ -6,9 +6,9 @@ app.config(['storeProvider', function (storeProvider) {
 }]);
 app.controller('adminspacecontroller', function ($scope, $http, $window, $location) {
 
-/*****************************************************************************************************
- * insert updated data into database
- */	
+	/*****************************************************************************************************
+	 * insert updated data into database
+	 */
 	$scope.submit = function (req, res) {
 		$scope.data = {}
 		console.log($scope.x.SpaceId);
@@ -44,15 +44,15 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 		});
 	}
 
-/*****************************************************************************************************
- * get space id from url and display as pre-loaded data form
- */
-	$scope.getID = function(){
+	/*****************************************************************************************************
+	 * get space id from url and display as pre-loaded data form
+	 */
+	$scope.getID = function () {
 
 		var stringUrl = $location.absUrl();
 		var EqualPos = stringUrl.indexOf("=");
 		var id = stringUrl.substring(EqualPos + 1);
-		
+
 		$http.get(baseurl + 'space/spacedetail/' + id).success(function (res) {
 
 			if (res.status == 'false') {
@@ -67,9 +67,36 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 		})
 	}
 
-/*****************************************************************************************************
- * insert space into database through AddSpace.html
- */
+	/*****************************************************************************************************
+	 * Adminlogin  through AddSpace.html
+	 */ 
+    $scope.login=function(req,res)
+    { 
+		$scope.user = {}
+	    $scope.user.UserName = $scope.UserName;
+		$scope.user.Password = $scope.Password;
+	    var Username=$scope.user.UserName;
+		var Password=$scope.user.Password;
+		console.log("hiii");
+       
+        if(Username=="admin" && Password=="admin123")
+        {
+        
+
+      $window.location ="index.html";
+      console.log(hiii);
+
+        }
+        else
+        {
+            $scope.message="Error";
+            $scope.messagecolor="alert alert-danger";
+        }
+    };
+	
+	/*****************************************************************************************************
+	 * insert space into database through AddSpace.html
+	 */
 	$scope.insertspace = function (req, res) {
 		$scope.data = {}
 
@@ -93,10 +120,10 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 			alert("Please check your internet connection or data source..");
 		});
 	}
-	
-/*****************************************************************************************************
- * Delete space from database
- */
+
+	/*****************************************************************************************************
+	 * Delete space from database
+	 */
 	$scope.del = function (id, res) {
 		var tags = $http.get(baseurl + 'space/deletespace/' + id).success(function (res) {
 			console.log(id);
@@ -113,9 +140,9 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 		return tags;
 	}
 
-/*****************************************************************************************************
- * default init function
- */
+	/*****************************************************************************************************
+	 * default init function
+	 */
 	$scope.init = function () {
 		console.log(baseurl);
 		console.log("init function inside");
