@@ -193,3 +193,19 @@ exports.updatespace = function(req, res) {
       }
       });
  }
+
+//  exports.findVendorPassword = function(req, res){
+//   var vendorEmail = req.params.email;
+//   var query = "select password from user_vendor where `emailID` ='" + vendorEmail + "'";
+//   db.query(query, function (err, rows){
+              
+//     for(var i=0; i<rows.length; i++){
+
+//       res.jsonp(rows[i].password);
+//     }
+//   })
+// }
+
+
+
+

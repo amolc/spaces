@@ -10,7 +10,9 @@ var cors = require('cors');
 var formidable = require('formidable');
 var fs = require('fs');
 
-var space=require('./api/space.js');//space variable contains path of space.js
+var space=require('./api/space.js');
+//space variable contains path of space.js
+var user=require('./api/user.js');
 
 
 //APi
@@ -39,6 +41,11 @@ app.get('/api/space', space.viewspace);
 app.get('/api/space/deletespace', space.deletespace);
 app.post('/api/space/updatespace/:id',space.updatespace);
 app.get('/api/space/spacedetail/:id',space.spacedetail);
+
+
+app.post('/api/createuser', user.createuser);
+app.get('/api/authentication/:Username', user.authentication);
+
 
 
 //The root folder 

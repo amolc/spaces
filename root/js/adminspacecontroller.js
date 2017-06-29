@@ -160,5 +160,61 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 	}
 
 
+  $scope.registration=function(req,res)
+    { 
+		$scope.data = {}
+	    $scope.data.Username = $scope.Username;
+		$scope.data.Password = $scope.Password;
+		$scope.data.Email = $scope.Email;
+	    // var Username=$scope.user.UserName;
+		// var Password=$scope.user.Password;
+		// var Email=$scope.user.Email;
+		console.log("hiii");
+		
+
+		$http.post(baseurl +'createuser', $scope.data).success(function (res) {
+			$scope.res = res;
+
+			if (res.status == 'false') {
+				alert(res.message);
+			} else {
+				alert("success");
+			}
+		}).error(function () {
+			alert("Please check your internet connection or data source..");
+		});
+	}
+
+   
+    
+
+$scope.authenticate = function (req, res) {
+
+    $http.get(baseurl + 'authentication/' + $scope.Username).success(function (res) {
+      if (res.status == 'false') {
+        console.log("inside false");
+      } else {
+        // document.loginuser.reset();
+        // console.log(res);
+
+        if (res.length == 0 || $scope.Password != res) {
+          $("#error").show();
+		  console.log("error");
+		  alert("incorrect password");
+        } else {
+          $window.location = 'Index.html';
+        }
+      }
+
+    }).error(function () {
+
+    });
+  }
+
+
+
 	var baseurl = "http://localhost:5000/api/";
 });
+
+
+
