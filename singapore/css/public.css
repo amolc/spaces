@@ -1,0 +1,210 @@
+
+
+.spacer {
+	min-height: 20px;
+}
+
+.ui-sortable { margin: 0 !important; }
+
+.mod-container { padding: 20px; position: relative; }
+
+.mod-image.fit img { width: 100%; }
+.mod-image.fix img { width: auto; }
+
+.mod-icon a { 
+	border-radius: 100%;
+	background: #000;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+}
+
+.mod-icon a:hover { 
+	background: #666;
+}
+
+.mod-icon a i { 
+	color: #fff;
+}
+
+.mod-icon a.default { 
+	width: 75px;
+	height: 75px;
+}
+
+.mod-icon a.default i { 
+	font-size: 40px;
+	padding: 20px;
+}
+
+.mod-icon a.large { 
+	width: 100px;
+	height: 100px;
+}
+
+.mod-icon a.large i { 
+	font-size: 60px;
+	padding: 20px;
+	
+}
+
+.mod-icon a.small { 
+	width: 50px;
+	height: 50px;
+}
+
+.mod-icon a.small i { 
+	font-size: 20px;
+	padding: 15px;
+	border-radius: 100%;
+}
+
+
+.mod-social ul.social {
+	
+}
+
+
+/***********************************************/
+/* Social *
+/***********************************************/
+
+
+.mod-social ul.social {
+	text-align: center; 
+	overflow: hidden;
+}
+
+.mod-social ul.social li {
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    line-height: 50px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; 
+	background: #000;
+	margin: 10px 5px;
+}
+
+.mod-social ul.social li:hover {
+    background: #0088CC;
+	color: #fff;
+}
+
+.mod-social ul.social li:hover a {
+	text-decoration:none;
+	color: #fff !important;
+}
+
+.mod-social ul.social li a {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    color: #fff;
+ 	font-size: 20px;
+	line-height: 35px;
+	padding-top: 7px;
+}
+
+.mod-social ul.social li {
+    border-radius: 100%;
+}
+
+
+/***********************************************/
+/* Collapse *
+/***********************************************/
+
+.collapseShow {
+	position: relative;
+	color: #4A94D9;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 30px;
+	margin: 15px 0;
+	display: block;
+}
+
+.collapseShow:hover {
+	color: #333;
+	text-decoration:none;
+}
+
+.collapseShow:before {
+	font-family: FontAwesome;
+	position: absolute;
+	left: 8px;
+	top: 0px;
+	font-size: 16px;
+	content: "\f068";
+	color: #4A94D9;
+}
+
+.collapseHide {
+	position: relative;
+	color: #4A94D9;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 30px;
+	margin: 15px 0;
+	display: block;
+}
+
+.collapseHide:hover {
+	color: #333;
+	text-decoration:none;
+}
+
+.collapseHide:before {
+	font-family: FontAwesome;
+	position: absolute;
+	left: 8px;
+	top: 0px;
+	font-size: 16px;
+	content: "\f067";
+	color: #4A94D9;
+}
+
+.mod-collapse .nav-toggle {
+	/*margin: 20px 0;
+	background: #f1f1f1;
+	border: 1px solid #e5e5e5;
+	padding: 20px;*/
+}
+
+.mod-collapse .collapseContent {
+	margin: 20px 0;
+	background: #f1f1f1;
+	border: 1px solid #e5e5e5;
+	padding: 20px;
+}
+
+.map {
+	width: 100%;
+	height: 300px;
+	overflow: visible !important;
+	margin: 20px 0;
+}
+.map img {
+	max-width: none !important;
+}
+
+.interweb-edit-mode .mod-youtube { position: relative; background: #f1f1f1; padding: 40px; text-align:center; height: 300px; }
+
+.interweb-edit-mode .mod-youtube:before {
+	font-family: FontAwesome;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 45px;
+	content: "\f167";
+	color: #ccc;
+	width: 50px;
+	height: 50px;
+	text-align:center;
+	margin: -25px 0 0 -25px;
+}

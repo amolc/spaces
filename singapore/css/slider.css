@@ -1,0 +1,462 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+ @import url(//fonts.googleapis.com/css?family=Open+Sans:400,800,300,700);
+ 
+#slider {
+	background: #333 url(../img/background.png) center center no-repeat;
+}
+
+#slider .img { border-radius: 10px; }
+
+.sliderrev { 
+	padding: 20px 0; 
+	position: relative;
+}
+
+.slider-mini {
+	position: relative;
+	margin: 20px 0 0 0;
+}
+
+.tp-dottedoverlay {
+	background: rgba(0,0,0,0.5);
+	height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+@media (min-width: 481px) and (max-width: 979px) {
+	.sliderrev { 
+		padding: 20px 0; 
+	}
+	
+	.static-page {
+		margin: 20px 10px 0;
+	}
+}
+
+@media (min-width: 1px) and (max-width: 978px) {
+/*#slider { 
+	display: none; 
+}*/
+
+}
+
+/*************************
+	-	CAPTIONS	-
+**************************/
+
+.tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important;}
+
+
+.tp-caption { 
+	z-index:1; 
+	/*white-space: nowrap;*/ 
+}
+
+.tp-caption-demo .tp-caption	{	position:relative !important; display:inline-block; margin-bottom:10px; margin-right:20px !important;}
+
+.tp-caption .very_big_white {
+	font-size:32px;
+	line-height:45px;
+	font-weight:600;
+	font-family:"Lato";
+	color:#fff;
+	text-decoration:none;
+	background-color:transparent;
+	text-align:center;
+	letter-spacing:-1px;
+	width: 100%;
+}
+
+.tp-caption .large_bold_white_25 {
+	font-size:18px;
+	line-height:35px;
+	font-weight:600;
+	font-family:"Lato";
+	color:#fff;
+	text-decoration:none;
+	background-color:transparent;
+	text-align:center;
+	text-rendering: optimizeLegibility; 
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+}
+
+@media (max-width: 1000px) {
+	 .very_big_white {
+		font-size:25px !important;
+		line-height:30px;
+	}
+	 
+	 .large_bold_white_25 {
+		font-size:14px !important;
+		line-height:20px;
+	}
+	
+	.tp-caption {
+		margin-top: 60px !important;
+		padding: 20px !important;	
+	}
+	
+}
+
+@media (max-width: 480px) {
+	
+	.tp-caption {
+		margin-top: 230px !important;
+		padding: 20px !important;	
+	}
+	
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.tp-caption .large_bold_white_25 {
+		font-weight: normal;
+	}
+}
+
+.tp-caption.titled div {
+	padding: 20px;
+}
+
+
+
+.tp_inner_padding	{	box-sizing:border-box;
+						-webkit-box-sizing:border-box;
+						-moz-box-sizing:border-box;
+						max-height:none !important;	}
+
+
+
+
+
+/******************************
+	-	BUTTONS	-
+*******************************/
+
+.tp-simpleresponsive .button				{	padding:6px 13px 5px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; height:30px;
+												cursor:pointer;
+												color:#fff !important; text-shadow:0px 1px 1px rgba(0, 0, 0, 0.6) !important; font-size:15px; line-height:45px !important;
+												background:url(../images/gradient/g30.png) repeat-x top; font-family: arial, sans-serif; font-weight: bold; letter-spacing: -1px;
+											}
+
+.tp-simpleresponsive  .button.big			{	color:#fff; text-shadow:0px 1px 1px rgba(0, 0, 0, 0.6); font-weight:bold; padding:9px 20px; font-size:19px;  line-height:57px !important; background:url(../images/gradient/g40.png) repeat-x top;}
+
+
+.tp-simpleresponsive  .purchase:hover,
+.tp-simpleresponsive  .button:hover,
+.tp-simpleresponsive  .button.big:hover		{	background-position:bottom, 15px 11px;}
+
+
+
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	 }
+
+
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		.tp-simpleresponsive  .button	{	padding:4px 8px 3px; line-height:25px !important; font-size:11px !important;font-weight:normal;	}
+		.tp-simpleresponsive  a.button { -webkit-transition: none; -moz-transition: none; -o-transition: none; -ms-transition: none;	 }
+
+
+	}
+
+    @media only screen and (min-width: 0px) and (max-width: 479px) {
+		.tp-simpleresponsive  .button	{	padding:2px 5px 2px; line-height:20px !important; font-size:10px !important;}
+		.tp-simpleresponsive  a.button { -webkit-transition: none; -moz-transition: none; -o-transition: none; -ms-transition: none;	 }
+	}
+
+
+
+
+
+/*	BUTTON COLORS	*/
+
+
+
+.tp-simpleresponsive  .button.green, .tp-simpleresponsive  .button:hover.green,
+.tp-simpleresponsive  .purchase.green, .tp-simpleresponsive  .purchase:hover.green			{ background-color:#21a117; -webkit-box-shadow:  0px 3px 0px 0px #104d0b;        -moz-box-shadow:   0px 3px 0px 0px #104d0b;        box-shadow:   0px 3px 0px 0px #104d0b;  }
+
+
+.tp-simpleresponsive  .button.blue, .tp-simpleresponsive  .button:hover.blue,
+.tp-simpleresponsive  .purchase.blue, .tp-simpleresponsive  .purchase:hover.blue			{ background-color:#1d78cb; -webkit-box-shadow:  0px 3px 0px 0px #0f3e68;        -moz-box-shadow:   0px 3px 0px 0px #0f3e68;        box-shadow:   0px 3px 0px 0px #0f3e68;}
+
+
+.tp-simpleresponsive  .button.red, .tp-simpleresponsive  .button:hover.red,
+.tp-simpleresponsive  .purchase.red, .tp-simpleresponsive  .purchase:hover.red				{ background-color:#cb1d1d; -webkit-box-shadow:  0px 3px 0px 0px #7c1212;        -moz-box-shadow:   0px 3px 0px 0px #7c1212;        box-shadow:   0px 3px 0px 0px #7c1212;}
+
+.tp-simpleresponsive  .button.orange, .tp-simpleresponsive  .button:hover.orange,
+.tp-simpleresponsive  .purchase.orange, .tp-simpleresponsive  .purchase:hover.orange		{ background-color:#ff7700; -webkit-box-shadow:  0px 3px 0px 0px #a34c00;        -moz-box-shadow:   0px 3px 0px 0px #a34c00;        box-shadow:   0px 3px 0px 0px #a34c00;}
+
+.tp-simpleresponsive  .button.darkgrey, .tp-simpleresponsive  .button.grey,
+.tp-simpleresponsive  .button:hover.darkgrey, .tp-simpleresponsive  .button:hover.grey,
+.tp-simpleresponsive  .purchase.darkgrey, .tp-simpleresponsive  .purchase:hover.darkgrey	{ background-color:#555; -webkit-box-shadow:  0px 3px 0px 0px #222;        -moz-box-shadow:   0px 3px 0px 0px #222;        box-shadow:   0px 3px 0px 0px #222;}
+
+.tp-simpleresponsive  .button.lightgrey, .tp-simpleresponsive  .button:hover.lightgrey,
+.tp-simpleresponsive  .purchase.lightgrey, .tp-simpleresponsive  .purchase:hover.lightgrey	{ background-color:#888; -webkit-box-shadow:  0px 3px 0px 0px #555;        -moz-box-shadow:   0px 3px 0px 0px #555;        box-shadow:   0px 3px 0px 0px #555;}
+
+
+/**********************************************
+	-	FULLSCREEN AND FULLWIDHT CONTAINERS	-
+**********************************************/
+
+.fullscreen-container {
+		width:100%;
+		position:relative;
+		padding:0;
+}
+
+
+
+.fullwidthbanner-container{
+	width:100%;
+	position:relative;
+	padding:0;
+	overflow:hidden;
+}
+
+.fullwidthbanner-container .fullwidthbanner{
+	width:100%;
+	position:relative;
+}
+
+
+
+/************************************************
+	  - SOME CAPTION MODIFICATION AT START  -
+*************************************************/
+.tp-simpleresponsive .caption,
+.tp-simpleresponsive .tp-caption {
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";		-moz-opacity: 0;	-khtml-opacity: 0;	opacity: 0; */
+	position:absolute;visibility: hidden;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+
+.tp-simpleresponsive img	{	max-width:none;}
+
+
+
+/******************************
+	-	IE8 HACKS	-
+*******************************/
+.noFilterClass {
+	filter:none !important;
+}
+
+
+/******************************
+	-	SHADOWS		-
+******************************/
+.tp-bannershadow  {
+		position:absolute;
+
+		margin-left:auto;
+		margin-right:auto;
+		-moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+	}
+
+
+
+/** BULLETS **/
+
+.tpclear {	clear:both;}
+
+.tp-bullets {	
+display: none;
+	bottom: 40px !important; z-index:1000; position:absolute;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;-webkit-transform: translateZ(5px);
+}
+
+/*.tp-bullets.hidebullets	{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}*/
+
+.tp-bullets.simplebullets.navbar						{ 	border:1px solid #666; border-bottom:1px solid #444; background:url(../js/revolution/assets/boxed_bgtile.png); height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
+
+.tp-bullets.simplebullets.navbar-old					{ 	 background:url(../js/revolution/assets/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
+
+
+.tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	background: #000;	width:8px;	height:8px;  margin-right:0px; float:left; margin-top:0px; margin-left:3px; border-radius: 100%; border: 4px solid #000;}
+.tp-bullets.simplebullets.round .bullet.last			{	margin-right:3px;}
+
+.tp-bullets.simplebullets.navbar-old .bullet			{	cursor:pointer; position:relative;	background:url(../js/revolution/assets/navigdots.png) no-Repeat bottom left;	width:15px;	height:15px;  margin-left:5px !important; margin-right:5px !important;float:left; margin-top:10px;}
+.tp-bullets.simplebullets.navbar-old .bullet.first		{	margin-left:0px !important;}
+.tp-bullets.simplebullets.navbar-old .bullet.last		{	margin-right:0px !important;}
+
+.tp-bullets.simplebullets .bullet:hover,
+.tp-bullets.simplebullets .bullet.selected				{	background: #fff; }
+
+.tp-bullets.simplebullets.round .bullet:hover,
+.tp-bullets.simplebullets.round .bullet.selected,
+.tp-bullets.simplebullets.navbar .bullet:hover,
+.tp-bullets.simplebullets.navbar .bullet.selected		{	background-position:bottom left; }
+
+
+
+/*************************************
+	-	TP ARROWS 	-
+**************************************/
+
+.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	width:40px;	height:40px; margin-left: 20px;  }
+.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	width:40px;	height:40px; margin-right: 20px;   }
+
+.slider-mini .tp-leftarrow											{	margin-left: 20px;  }
+.slider-mini .tp-rightarrow											{ margin-right: 20px;   }
+
+.tparrows:before {
+    font-family: "FontAwesome";
+	color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: 0;
+    margin-top: -25px;
+    text-align: center;
+    width: 40px;
+    font-size: 80px;
+}
+.tparrows {
+    cursor: pointer;
+    width: 40px !important;
+    height: 40px !important;
+	
+}
+.tparrows:hover:before {
+    color: #000;
+}
+.tp-leftarrow:before {
+    content: '\f104';
+}
+.tp-rightarrow:before {
+    content: '\f105';
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************
+		-	TP BANNER TIMER		-
+*************************************/
+	.tp-bannertimer	 {	width:100%; height:0px; background:url(../js/revolution/assets/timer.png);position:absolute; z-index:200;top:0px; visibility: hidden; display: none; }
+	.tp-bannertimer.tp-bottom	{	bottom:0px;height:5px; top:auto;}
+
+
+/***************************************
+	-	RESPONSIVE SETTINGS 	-
+****************************************/
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+	.responsive .tp-bullets	{	display:none}
+	.responsive .tparrows	{	display:none;}
+}
+
+
+
+
+/*********************************************
+-	BASIC SETTINGS FOR THE BANNER	-
+***********************************************/
+
+ .tp-simpleresponsive img {
+		-moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+}
+
+.tp-simpleresponsive a {	
+	text-decoration:none;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 5px;
+	transition-duration: 0.5s;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+ .tp-simpleresponsive a {	
+	font-weight: normal;
+}
+}
+
+.tp-simpleresponsive a:hover {	
+	background: #000;
+	background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.3);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.tp-simpleresponsive ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	background: none;
+	overflow:hidden;
+	position: relative;
+}
+
+.tp-simpleresponsive >ul >li{
+	list-stye:none;
+	position:absolute;
+	visibility:hidden;
+	overflow: hidden;
+	height: 100%;
+}
+/*  CAPTION SLIDELINK   **/
+.caption.slidelink a div,
+.tp-caption.slidelink a div {	width:3000px; height:1500px;  background:url(../js/revolution/assets/coloredbg.png) repeat;}
+
+/******************************
+	-	LOADER FORMS	-
+********************************/
+
+.tp-loader 	{	  
+	top:50%; left:50%; 
+	z-index:10000; 
+	position:absolute;
+}
+			
+.tp-loader.spinner0 {
+  width: 40px;
+  height: 40px;
+  background:url(../img/loader.gif) no-repeat center center;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);  
+  margin-top:-20px;
+  margin-left:-20px;
+  -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
+  animation: tp-rotateplane 1.2s infinite ease-in-out;
+  border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+

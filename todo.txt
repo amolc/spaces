@@ -1,5 +1,0 @@
-Frontend - There is a small issue when we open the about us page, the page jumps a bit.
-API - API for survey need to be called from this API directory
-Survey - The survey folder needs to migrated to this project.
-Survey - We need to trigger the invitation email.
-Check if npm install works automatically
