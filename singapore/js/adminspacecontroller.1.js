@@ -1,10 +1,15 @@
 
 "use strict";
-var app = angular.module('SPACE', ['angular-storage'] );
+var app = angular.module('SPACE', ['angular-storage']['ngRoute']);
+
 app.config(['storeProvider', function (storeProvider) {
 	storeProvider.setStore('sessionStorage');
 }]);
 
+app.config(function($routeprovider)
+	{
+		$routeprovider.when('/booking/:id',{templateUrl:'booking.html',controller:'adminspacecontroller'})
+	});
 app.controller('adminspacecontroller', function ($scope, $http, $window, $location) {
 
 	/*****************************************************************************************************
@@ -68,43 +73,6 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 		})
 	}
 
-
-
-$scope.Booking = function (req, res) {
-	    var stringUrl = $location.absUrl();
-		var EqualPos = stringUrl.indexOf("=");
-		var id = stringUrl.substring(EqualPos + 1);
-        console.log(id)
-		$scope.data = {}
-		console.log(id);
-		console.log($scope.ContactName);
-		console.log($scope.ContactEmail);
-		console.log($scope.ContactNumber);
-
-	
-		$scope.data.SpaceId=id;
-
-		console.log($scope.data.SpaceId);
-		$scope.data.ContactName = $scope.ContactName;
-		$scope.data.ContactEmail = $scope.ContactEmail;
-		$scope.data.ContactNumber = $scope.ContactNumber;
-	 	console.log($scope.data.SpaceId);
-
-		//console.log($scope.data.SpaceAmenities);
-		//console.log(id);
-
-		$http.post(baseurl + 'booking/create/'+ $scope.data.SpaceId, $scope.data).success(function (res) {
-			$scope.res = res;
-			if (res.status == 'false') {
-				alert(res.message);
-			} else {
-				alert("success");
-			}
-		}).error(function () {
-			alert("Please check your internet connection or data source..");
-		});
-	}
-	
 
 
 	//  * get space id 

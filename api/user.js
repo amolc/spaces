@@ -4,8 +4,8 @@ var mysql = require('mysql');
 var db = mysql.createPool({
   database: 'cowork',
   user: 'cio_choice',
-  password: 'cxohonour.com',
-  host: '',
+  password: '10gXWOqeaf',
+  host: 'cxohonour.com',
 });
 
 var CRUD = require('mysql-crud');
@@ -69,5 +69,31 @@ exports.allusers = function(req, res) {
 };
 
 
+exports.booking = function(req, res) {
+	  var SpaceId = req.params.id;
+    var ContactName = req.body.ContactName;
+    var ContactEmail = req.body.ContactEmail;
+    var ContactNumber = req.body.ContactNumber; 
+  
+      console.log(SpaceId);
+
+ UserCRUD.create({ 'ContactName' : ContactName, 'ContactEmail' :ContactEmail, 'ContactNumber' : ContactNumber,'SpaceId' : SpaceId},
+    function (err, vals) {
+      if (!err) {
+        var resdata = {
+          status: true,
+          message: 'user answer successfully added'
+        };
+        //res.jsonp(resdata);
+      } else {
+        var resdata = {
+          status: false,
+          message: 'record not added '
+        };
+        //res.jsonp(resdata);
+      }
+
+    });
 
 
+}
