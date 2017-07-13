@@ -152,9 +152,11 @@ if (!err) {
 
  exports.spacedetail = function(req, res) {
   var id=parseInt(req.params.id);
+  console.log(id);
         var query = "SELECT * FROM Space where `SpaceId`="+id;
               db.query(query, function(err, rows){
               res.jsonp(rows);
+              console.log(rows);
    });
  };
 

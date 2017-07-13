@@ -1,6 +1,6 @@
 
 "use strict";
-var app = angular.module('SPACE', ['angular-storage'] );
+var app = angular.module('SPACE', ['angular-storage']);
 app.config(['storeProvider', function (storeProvider) {
 	storeProvider.setStore('sessionStorage');
 }]);
@@ -48,13 +48,13 @@ app.controller('adminspacecontroller', function ($scope, $http, $window, $locati
 	/*****************************************************************************************************
 	 * get space id from url and display as pre-loaded data form
 	 */
-	$scope.getID = function () {
-
+	$scope.init2=function(){
+console.log("hiii");
 		var stringUrl = $location.absUrl();
 		var EqualPos = stringUrl.indexOf("=");
 		var id = stringUrl.substring(EqualPos + 1);
-
-		$http.get(baseurl + 'space/spacedetail/' + id).success(function (res) {
+console.log(id);
+		$http.get(baseurl +'spacedetail/' + id).success(function (res) {
 
 			if (res.status == 'false') {
 				alert(res.message);
